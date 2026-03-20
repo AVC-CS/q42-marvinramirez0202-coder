@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
+using ::cout;
 
 int main()
 {
@@ -15,9 +16,39 @@ int main()
     cin >> weight >> distance;
 
     // TODO
+    if(weight > 0 && weight <= 20){
+        if(distance >= 10 && distance <= 3000){
+            if(weight <= 2){
+                rate = rate1;
+            }
+            else if(weight <= 6){
+                rate = rate2;
+            }
+            else if(weight <= 10){
+                rate = rate3;
+            }
+            else{
+                rate = rate4;
+            }
+        }
+        else{
+            cout << "Wrong input";
+        }
+    }
+    else{
+        cout << "Wrong input";
+    }
 
-    cout << setw(10) << left << setprecision(2) << fixed;
-    cout << total_charge << endl;
+    if(distance >= 500 && distance <= 3000){
+        total_charge = (distance/500.0) * rate;
+        cout << setw(10) << left << setprecision(2) << fixed;
+        cout << total_charge;  
+    }
+    else if(distance < 500){
+        cout << setprecision(2) << fixed;
+        cout << rate;
+    }
+
 
     return 0;
 }
