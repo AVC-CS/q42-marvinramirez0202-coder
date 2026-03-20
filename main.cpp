@@ -39,7 +39,7 @@ int main()
         cout << "Wrong input";
     }
 
-    if(distance >= 500 && distance <= 3000){
+    if(distance >= 500 && distance <= 3000 && weight > 0){
         total_charge = (distance/500.0) * rate;
         cout << setw(10) << left << setprecision(2) << fixed;
         cout << total_charge;  
