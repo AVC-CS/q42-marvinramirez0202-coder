@@ -45,7 +45,7 @@ int main()
         }
     }
     else{
-        cout << "Wrong input";
+        cout << "invalid weight";
     }
     
     return 0;
